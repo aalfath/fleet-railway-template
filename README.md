@@ -42,7 +42,7 @@ Fixed settings are in `fleet/railway-start.sh`: plain HTTP behind Railway's TLS 
 
 ## Resources
 
-Fleet uses about 150 to 300 MB of memory when idle and more while it processes vulnerabilities (it downloads NVD and OVAL data into `/data/vulndb` every hour). MySQL uses about 400 MB. Give the Fleet volume enough room for the software installers you upload.
+In our test deploy, Fleet used under 100 MB of memory at idle, MySQL about 410 MB and Redis under 30 MB. Fleet needs more while its vulnerability job runs (by default hourly), which downloads NVD and OVAL data into `/data/vulndb`. Give the Fleet volume enough room for the software installers you upload.
 
 ## Not included
 
